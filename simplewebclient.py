@@ -5,7 +5,11 @@ from socket import *
 # Making a  window to call for
 mysocket = socket(AF_INET, SOCK_STREAM)
 # calling the connecting function
-mysocket.connect(('127.0.0.1',9000))
+try:
+    mysocket.connect(('127.0.0.1',9000))
+except:
+    print("The server looks down now")
+    quit()
 # Forming url
 cmd = 'GET http://127.0.0.1:9000/ HTTP/1.0\r\n\r\n'.encode()
 mysocket.send(cmd)
