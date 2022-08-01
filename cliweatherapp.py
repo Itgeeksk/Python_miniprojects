@@ -7,10 +7,10 @@ rest = requests.get(url)
 
 data = rest.json() 
 
-humidity = data['main']['humidity'],
-pressure = data['main']['pressure'],
-wind =  data['wind']['speed'],
-description =  data['weather'][0]['description'],
+humidity = data['main']['humidity']
+pressure = data['main']['pressure']
+wind =  data['wind']['speed']
+description =  data['weather'][0]['description']
 temp= data['main']['temp']
 
 print(f"""  
